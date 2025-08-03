@@ -1,0 +1,116 @@
+/* Reset and body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #222;
+  color: #e81313;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #f9f0f0;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Category Sections */
+.category {
+  margin: 40px 0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Unique colors per category */
+#love {
+  background: linear-gradient(to right, #ffd1dc, #ffe3e8);
+}
+
+#action {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+#comedy {
+  background: linear-gradient(to right, #fff6b7, #fceabb);
+}
+
+#scifi {
+  background: linear-gradient(to right, #c1dfc4, #deecdd);
+}
+
+.category h2 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.6rem;
+}
+
+/* Horizontal scroll movies */
+.movies {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 10px;
+  scroll-snap-align: start;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+footer {
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+footer a {
+  color: #ffcc00;
+  text-decoration: none;
+}
