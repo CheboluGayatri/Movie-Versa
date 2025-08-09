@@ -1,181 +1,153 @@
-/* Reset */
+/* Reset and body */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: rgb(255, 27, 27);
+    scroll-behavior: smooth;
 }
 
+/* Header */
 header {
-  background-color: #111;
-  color: #e50914;
-  padding: 20px 0;
-  text-align: center;
+    background: #222;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    margin-bottom: 10px;
+    font-size: 28px;
 }
 
 nav a {
-  margin: 10px 15px;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
 nav a:hover {
-  color: #e50914;
-  text-decoration: underline;
+    color: #ffcc00;
 }
 
-main {
-  padding: 30px;
-}
-
+/* Category Sections */
 .category {
-  margin-bottom: 60px;
+    padding: 40px;
+    text-align: center;
 }
 
 .category h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #e50914;
-  border-bottom: 2px solid #e50914;
-  display: inline-block;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffcc00;
 }
 
+/* Movie Cards Container */
 .movies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.card {
-  background-color: #1c1c1c;
-  border-radius: 10px;
-  width: 200px;
-  padding: 15px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 10px rgba(229, 9, 20, 0.4);
+/* Movie Card */
+.movie-card {
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease;
+    position: relative;
+    text-align: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.movie-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 8px;
-  height: 280px;
-  object-fit: cover;
+.movie-card h3 {
+    margin: 10px 0 5px 0;
+    font-size: 20px;
+    color: #fff;
 }
 
-.card h3 {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  color: #fff;
+.movie-card p {
+    color: gold;
+    margin-bottom: 10px;
 }
 
-.card p {
-  font-size: 0.9rem;
-  color: #ccc;
+/* Hover Effect */
+.movie-card:hover {
+    transform: scale(1.05);
 }
 
+.hover-info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.movie-card:hover .hover-info {
+    display: block;
+}
+
+/* Footer */
 footer {
-  background-color: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 20px;
-  margin-top: 50px;
+    text-align: center;
+    padding: 15px;
+    background: #222;
 }
 
 footer a {
-  color: #e50914;
-  text-decoration: none;
+    color: #ffcc00;
+    text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
-/* ===========================
-   RESPONSIVE DESIGN STARTS
-=============================*/
-
-/* Tablets (≤ 768px) */
+/*  Mobile Responsive */
 @media screen and (max-width: 768px) {
-  header h1 {
-    font-size: 2.2rem;
-  }
+    .movie-card {
+        width: 90%; /* make cards fit nicely on tablets & small screens */
+    }
 
-  nav a {
-    font-size: 1rem;
-    margin: 8px 10px;
-  }
+    .movie-card img {
+        height: auto;
+    }
 
-  .movies {
-    gap: 15px;
-  }
-
-  .card {
-    width: 160px;
-    padding: 10px;
-  }
-
-  .card img {
-    height: 220px;
-  }
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
 }
 
-/* Mobiles (≤ 480px) */
 @media screen and (max-width: 480px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
+    .category h2 {
+        font-size: 24px;
+    }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
+    .movie-card h3 {
+        font-size: 18px;
+    }
 
-  nav a {
-    display: block;
-    margin: 10px 0;
-    font-size: 1rem;
-  }
-
-  main {
-    padding: 15px;
-  }
-
-  .category h2 {
-    font-size: 1.5rem;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .card img {
-    height: auto;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
+    .movie-card p {
+        font-size: 14px;
+    }
 }
