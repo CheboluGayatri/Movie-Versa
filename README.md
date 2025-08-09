@@ -1,14 +1,11 @@
-#Movie-versa
-Movie Versa is a simple and stylish web project that showcases a collection of movies with details like titles, posters, and brief descriptions. Built with HTML, CSS, and images, it's designed to be responsive and visually engaging — perfect as a beginner-friendly movie showcase or landing page.
+Movie Verse
+A simple and responsive HTML & CSS website that showcases movies in four categories — Comedy, Action, Love Movies, and Sci-Fi.
+Features smooth navigation, hover effects, and mobile-friendly design.
 
-✨ Features
-Clean and responsive layout
+📌 How to Use
+Clone the repo:
 
-Movie poster gallery
-
-Minimalist design with HTML/CSS only
-
-Easy to customize or expand
-=======
-# Movie-Versa
->>>>>>> 595faf5ef71fd5039215a05551723ced899ce44d
+bash
+Copy
+Edit
+git clone https://github.com/CheboluGayatri/Movie-Versa.git
